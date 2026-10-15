@@ -1,0 +1,127 @@
+/* ---------- Notifications ---------- */
+.toast-zone {
+  position: fixed;
+  top: 90px;
+  right: 16px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: calc(100vw - 32px);
+}
+
+.toast {
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: #fff;
+  border-left: 5px solid #0a6b3d;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  color: #0d2b1d;
+}
+
+.toast.erreur {
+  border-left-color: #b00020;
+  color: #b00020;
+}
+
+/* ---------- Navbar mobile ---------- */
+.navbar-container {
+  position: relative;
+}
+
+.nav-burger {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.nav-mobile-user {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-links.ouvert {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 12px 20px 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    z-index: 50;
+  }
+
+  .nav-links.ouvert a,
+  .nav-links.ouvert button {
+    padding: 12px 8px;
+    text-align: left;
+  }
+
+  .nav-mobile-user {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #e3e3e3;
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+
+  .navbar-user {
+    display: none !important;
+  }
+
+  .nav-search-button {
+    display: none;
+  }
+}
+
+/* ---------- Panier ---------- */
+.panier-liste {
+  grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+  .panier-liste {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Espaces artisan / admin ---------- */
+.dash > main {
+  min-width: 0;
+}
+
+@media (max-width: 800px) {
+  .dash-sidebar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .dash-link {
+    white-space: nowrap;
+  }
+
+  .dash-row {
+    flex-wrap: wrap;
+  }
+
+  .section-heading {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
