@@ -7,3 +7,5 @@ artisans_locaux/staticfiles/
 frontend/node_modules/
 frontend/dist/
 .vscode/
+artisans_locaux/donnees_marketplace.json
+artisans_locaux/donnees_marketplace_backup.json
